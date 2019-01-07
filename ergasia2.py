@@ -3,6 +3,7 @@ print("Factors are:")
 
 i=2
 j=1
+final=[]
 apotel=[]
 tab=[]
 flag=True
@@ -29,9 +30,12 @@ try:
         if tab[i] not in apotel:                  
             apotel.append(tab[i])
             if(c>1):
-                print("(",tab[i],"**",c,")")
+                a="("+repr(tab[i])+"**"+repr(c)+")"
+                final.append(a)
             else:
-                print("(",tab[i],")")
+                a="("+repr(tab[i])+")"
+                final.append(a)
 except IndexError:
     gotdata = 'null'
             
+print(''.join(final))
