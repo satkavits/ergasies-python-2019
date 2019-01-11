@@ -4,7 +4,7 @@
 def sumIntervals(tab):
     l=[]
     c=0
-    flag=False
+    
     sum=0
     for i in range(0,len(tab)):
         sum= sum+(tab[i][1]-tab[i][0])
@@ -12,11 +12,9 @@ def sumIntervals(tab):
             if j not in l:
                 l.append(j)
             elif j!= tab[i][0] :
-                if j==tab[i][1] and flag==True :
-                    c=c+1
+                
                 c=c+1
-            else:
-                flag=True
+           
     sum=sum-c             
     
               
